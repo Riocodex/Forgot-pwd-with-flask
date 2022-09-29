@@ -1,10 +1,12 @@
+from venv import create
 from flask import Blueprint , render_template , request , flash , redirect , url_for 
 
 from .models import User , Books , ResetRequestForm , ResetPasswordForm
-from . import db , mail 
+from . import db , create_app
 from werkzeug.security import generate_password_hash , check_password_hash
 from flask_login import login_user , login_required , logout_user , current_user
 from flask_mail import Message
+sum = create_app()
 
 auth = Blueprint('auth' , __name__)
 
@@ -98,6 +100,7 @@ def send_mail(user):
     If you didnt send a password reset request. Please ignore this message.
     
     '''
+    sum.mail.send(msg)
 
 @auth.route('/reset_password' , methods=['GET' , 'POST'])
 def reset_request():
