@@ -1,1 +1,2 @@
 this project is about an app where users can book or rent cars
+the admin can post or create cars meant for booking
