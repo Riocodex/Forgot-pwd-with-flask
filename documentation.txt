@@ -1,4 +1,4 @@
 this project is about an app where users can book or rent cars
 the admin can post or create cars meant for booking
 users can book cars, admins reate the cars to be booked
-first is the authentication
+first is the authentication , then the forgot password feature
